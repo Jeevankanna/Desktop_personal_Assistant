@@ -1,0 +1,118 @@
+📌 Requirements for JARVIS AI Project 
+
+This document outlines the **system requirements**, **software dependencies**, and **hardware configurations** needed to run **JARVIS AI** efficiently.
+
+---
+
+1️⃣ System Requirements
+To ensure JARVIS runs smoothly, your system must meet the following **minimum** and **recommended** requirements.
+
+**✅ Minimum System Requirements**
+
+🔹 **Operating System:** Windows 10/11, macOS, Linux (Ubuntu 20.04+)  
+🔹 **Processor:** Intel Core i3 (or equivalent)  
+🔹 **RAM:** 4GB  
+🔹 **Storage:** At least 500MB of free space  
+🔹 **Internet Connection:** Required for **API-based services** (ChatGPT, Weather, etc.)  
+🔹 **Microphone:** Required for **voice input**  
+
+**✅ Recommended System Requirements**
+
+🔹 **Processor:** Intel Core i5/i7 or AMD Ryzen 5/7  
+🔹 **RAM:** 8GB or higher  
+🔹 **GPU:** Dedicated GPU (for AI model enhancements)  
+🔹 **Storage:** SSD for faster execution  
+🔹 **High-Quality Microphone:** For better voice recognition  
+
+---
+
+**2️⃣ Software Dependencies**
+JARVIS AI requires the following **Python libraries** and tools.
+
+ **✅ Required Python Libraries**
+All dependencies are listed in `requirements.txt`. You can install them using:
+
+```bash:
+pip install -r requirements.txt
+```
+OR manually install each package:
+
+```bash:
+pip install pyttsx3 speechrecognition wikipedia webbrowser pyautogui requests openai
+```
+
+| **Library**           | **Purpose** |
+|----------------------|------------|
+| `pyttsx3`           | Text-to-Speech (TTS) engine |
+| `speechrecognition` | Converts speech to text |
+| `wikipedia`         | Fetches Wikipedia summaries |
+| `webbrowser`        | Opens web pages |
+| `pyautogui`         | Takes screenshots |
+| `requests`          | Handles API requests (Weather, AI) |
+| `openai`           | Integrates ChatGPT AI assistant |
+
+---
+
+**3️⃣ API Keys & External Services**
+Certain features require **API keys** for external services.
+
+| **Feature**         | **API Used** | **Required API Key** |
+|--------------------|-------------|----------------------|
+| **Weather Updates** | OpenWeather API | `WEATHER_API_KEY` |
+| **AI Chat** | OpenAI GPT-4 API | `OPENAI_API_KEY` |
+| **Smart Home Control** | IoT API (Optional) | `SMART_HOME_API_KEY` |
+
+📌 **🔹 How to Configure API Keys?**  
+- Open `config/settings.ini` and update:
+  ```ini
+  [API_KEYS]
+  OPENAI_API_KEY = YOUR_OPENAI_API_KEY
+  WEATHER_API_KEY = YOUR_OPENWEATHER_API_KEY
+  ```
+
+---
+
+**4️⃣ Hardware Peripherals**
+**Required for Full Functionality:**
+✔ **Microphone** – Needed for **voice recognition**  
+✔ **Speakers** – Required for **JARVIS voice output**  
+✔ **Webcam (Optional)** – Can be used for **future enhancements** (Face Recognition)  
+
+---
+
+## **5️⃣ File Structure & Data Storage**
+JARVIS AI follows a **modular file structure** to separate functionalities.
+
+📂 **Project Folder Structure**
+```
+JARVIS_AI/
+│── src/                   
+│   ├── main.py            # Core Execution File
+│   ├── speech.py          # Speech Recognition & TTS
+│   ├── memory.py          # Memory Management
+│   ├── music.py           # Music Control
+│   ├── weather.py         # Weather API Integration
+│   ├── reminder.py        # Reminder System
+│   ├── chat.py            # GPT-4 AI Chatbot
+│── data/                  
+│   ├── reminders.txt      # Stored Reminders
+│   ├── memory.txt         # Stored Memory
+│── assets/                
+│   ├── jarvis_3d.jpg      # JARVIS 3D Interface Image
+│── config/                
+│   ├── settings.ini       # API Keys & Preferences
+│── requirements.txt       # Python Libraries
+│── README.md              # Documentation
+│── run.bat                # Windows Batch File
+```
+
+---
+
+## **✅ Summary**
+🔹 **Minimum 4GB RAM, Recommended 8GB+**  
+🔹 **Python 3.8+ Required**  
+🔹 **API Keys Needed for AI & Weather Features**  
+🔹 **Install Required Python Libraries**  
+🔹 **Run via `main.py` or `run.bat` on Windows**  
+
+---
